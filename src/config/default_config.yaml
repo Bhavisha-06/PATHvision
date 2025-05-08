@@ -1,0 +1,58 @@
+# Default configuration for Vehicle Perception System
+
+# System general settings
+system:
+  device: "auto"  # auto, cpu, cuda, 0, 1, etc.
+  verbose: true
+
+# Object detection settings
+detection:
+  model: "yolov9s.pt"
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+  img_size: 640
+  
+# Object tracking settings
+tracking:
+  enabled: true
+  tracker_type: "bytetrack.yaml"
+  history_size: 30  # Number of frames to keep in tracking history
+
+# Road detection settings
+road_detection:
+  use_detectron: "auto"  # auto, force, disable
+  frame_skip: 5  # Process road detection every N frames
+  # OpenCV color thresholds for road detection
+  hsv_lower: [0, 0, 60]  
+  hsv_upper: [179, 50, 160]
+
+# Collision prediction settings
+collision:
+  ttc_threshold: 3.0  # Time to collision threshold in seconds
+  danger_threshold: 0.6  # Threshold for considering object dangerous
+  min_history_points: 5  # Minimum points needed for trajectory analysis
+  
+# Classes settings
+classes:
+  obstacle_classes: [
+    "person", "bicycle", "car", "motorcycle", "bus", 
+    "truck", "dog", "cow", "elephant", "bear", "horse", "sheep"
+  ]
+  
+# Visualization settings
+visualization:
+  show_bounding_boxes: true
+  show_trajectories: true
+  show_collision_paths: true
+  show_walkable_area: true
+  show_action_panel: true
+  show_warning: true
+  
+  # Colors (BGR format)
+  colors:
+    walkable_area: [230, 115, 0]  # Light blue
+    proceed: [0, 255, 0]  # Green
+    proceed_caution: [0, 255, 255]  # Yellow
+    slow_down: [0, 165, 255]  # Orange
+    stop: [0, 0, 255]  # Red
+    collision_path: [0, 0, 255]  # Red
