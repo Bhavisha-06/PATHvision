@@ -91,7 +91,7 @@ class SystemConfig:
         os.makedirs(self.output_dir, exist_ok=True)
 
 
-def ConfigManager(config_file: str) -> SystemConfig:
+def load_config(config_file: str) -> SystemConfig:
     """
     Load configuration from YAML file.
     
@@ -165,7 +165,7 @@ def ConfigManager(config_file: str) -> SystemConfig:
         return SystemConfig()
 
 
-def get_config_value(config: SystemConfig, config_file: str) -> None:
+def save_config(config: SystemConfig, config_file: str) -> None:
     """
     Save configuration to YAML file.
     
