@@ -32,8 +32,8 @@ A comprehensive system for vehicle perception, combining object detection, track
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/Bhavisha-06/vehicle-perception-system.git
-cd vehicle-perception-system
+git clone https://github.com/Bhavisha-06/PATHvision.git
+cd PATHvision
 ```
 
 2. Create and activate a virtual environment:
@@ -86,7 +86,7 @@ python src/main.py --input path/to/video.mp4 --output path/to/output.mp4 --no-tr
 ## Project Structure
 
 ```
-vehicle-perception-system/
+PATHvision/
 ├── src/                        # Source code
 │   ├── __init__.py
 │   ├── main.py                 # Main entry point
@@ -116,7 +116,7 @@ vehicle-perception-system/
 
 ## Configuration
 
-You can modify the `config/default_config.yaml` file to change various settings:
+You can modify the `src/config/default_config.yaml` file to change various settings:
 
 ```yaml
 # Example configuration 
@@ -146,7 +146,7 @@ visualization:
 ### Processing a video file
 
 ```python
-from vehicle_perception import VehiclePerceptionSystem
+from pathvision import VehiclePerceptionSystem
 
 # Initialize the system
 system = VehiclePerceptionSystem(use_tracking=True)
@@ -162,7 +162,7 @@ system.process_video(
 ### Real-time processing from a camera
 
 ```python
-from vehicle_perception import VehiclePerceptionSystem
+from pathvision import VehiclePerceptionSystem
 import cv2
 
 # Initialize the system
@@ -180,7 +180,7 @@ while True:
     processed_frame = system.process_frame(frame)
     
     # Display result
-    cv2.imshow("Vehicle Perception", processed_frame)
+    cv2.imshow("PATHvision", processed_frame)
     
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
