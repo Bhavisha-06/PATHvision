@@ -206,6 +206,21 @@ def save_config(config: SystemConfig, config_file: str) -> None:
         },
         'output_dir': config.output_dir
     }
+    # Add this to utils/config.py
+
+class ConfigManager:
+    def __init__(self, config_path: Optional[str] = None):
+        if config_path and os.path.exists(config_path):
+            self.config = load_config(config_path)
+        else:
+            self.config = get_default_config()
+    
+    def save(self, config_path: str):
+        save_config(self.config, config_path)
+
+    def get_config(self) -> SystemConfig:
+        return self.config
+
     
     # Save to YAML file
     try:
