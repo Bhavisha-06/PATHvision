@@ -231,6 +231,14 @@ def get_config_value(key: str, default: Any = None) -> Any:
         print(f"Could not get config value for {key}: {e}")
         return default
 
+def merge_configs(base_config: dict, override_config: dict) -> dict:
+    """Recursively merge override_config into base_config."""
+    for key, value in override_config.items():
+        if isinstance(value, dict) and key in base_config and isinstance(base_config[key], dict):
+            base_config[key] = merge_configs(base_config[key], value)
+        else:
+            base_config[key] = value
+    return base_config
 
     
     # Save to YAML file
