@@ -353,7 +353,7 @@ def create_color_map(
     return color_map
 
 
-def visualizer(
+def Visualizer(
     frame: np.ndarray,
     objects: List[dict],
     walkable_area_mask: Optional[np.ndarray] = None,
