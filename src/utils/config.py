@@ -91,7 +91,7 @@ class SystemConfig:
         os.makedirs(self.output_dir, exist_ok=True)
 
 
-def load_config(config_file: str) -> SystemConfig:
+def ConfigManager(config_file: str) -> SystemConfig:
     """
     Load configuration from YAML file.
     
