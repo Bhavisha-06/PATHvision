@@ -103,13 +103,10 @@ PATHvision/
 │   └── config/                 # Configuration files
 │       ├── default_config.yaml
 │       └── bytetrack.yaml      # ByteTrack configuration
-├── models/                     # Pre-trained models folder
 ├── data/                       # Example data folder
-│   ├── videos/                 # Example videos
 │   └── output/                 # Default output folder
 ├── docs/                       # Documentation
 │   └── images/                 # Images for documentation
-├── tests/                      # Unit tests
 ├── requirements.txt            # Project dependencies
 ├── setup.py                    # Package setup file
 └── README.md                   # Project readme
