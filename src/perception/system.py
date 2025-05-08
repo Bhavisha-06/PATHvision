@@ -11,11 +11,11 @@ import cv2
 import numpy as np
 import torch
 
-from ..utils.config import get_config_value
+from utils.config import get_config_value
 from .detector import ObjectDetector
 from .road_detection import RoadDetector
 from .collision import CollisionPredictor
-from ..utils.visualization import Visualizer
+from utils.visualization import Visualizer
 
 
 class VehiclePerceptionSystem:
