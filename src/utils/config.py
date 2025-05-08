@@ -165,7 +165,7 @@ def ConfigManager(config_file: str) -> SystemConfig:
         return SystemConfig()
 
 
-def save_config(config: SystemConfig, config_file: str) -> None:
+def get_config_value(config: SystemConfig, config_file: str) -> None:
     """
     Save configuration to YAML file.
     
