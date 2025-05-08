@@ -101,7 +101,8 @@ PATHvision/
 │   │   ├── visualization.py    # Visualization tools
 │   │   └── config.py           # Configuration management
 │   └── config/                 # Configuration files
-│       └── default_config.yaml
+│       ├── default_config.yaml
+│       └── bytetrack.yaml      # ByteTrack configuration
 ├── models/                     # Pre-trained models folder
 ├── data/                       # Example data folder
 │   ├── videos/                 # Example videos
