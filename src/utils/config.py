@@ -221,6 +221,17 @@ class ConfigManager:
     def get_config(self) -> SystemConfig:
         return self.config
 
+
+def get_config_value(key: str, default: Any = None) -> Any:
+    # Fallback function if you're accessing a global config dictionary
+    try:
+        config = load_config("path/to/default.yaml")  # Replace with actual path
+        return getattr(config, key, default)
+    except Exception as e:
+        print(f"Could not get config value for {key}: {e}")
+        return default
+
+
     
     # Save to YAML file
     try:
