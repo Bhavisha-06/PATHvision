@@ -19,7 +19,7 @@ A comprehensive system for vehicle perception, combining object detection, track
 
 ![System Demo](assets/fig7.png)
 ![collision_case1](assets/collision.png)
-![collision_case2](assets/collision2.png)
+![collision_case2](assets/collision_2.png)
 
 ## Requirements
 
