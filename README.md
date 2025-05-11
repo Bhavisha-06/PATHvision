@@ -17,7 +17,9 @@ A comprehensive system for vehicle perception, combining object detection, track
 - **Action Determination**: Automated decision making (Proceed, Slow Down, Stop)
 - **Visualization System**: Comprehensive visual feedback with trajectory paths and collision warnings
 
-![System Demo](docs/images/system_demo.png)
+![System Demo](assets/fig7.png)
+![collision_case1](assets/collision.png)
+![collision_case2](assets/collision2.png)
 
 ## Requirements
 
